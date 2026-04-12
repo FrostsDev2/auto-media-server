@@ -78,21 +78,24 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 
 1️⃣ MOUNT NAS
 
+```
 sudo mkdir -p /mnt/nas
-
+```
+```
 sudo mount -t cifs //NAS_IP/Media /mnt/nas \
   -o username=USER,password=PASS,uid=1000,gid=1000
-
-💡 Optional: Add to /etc/fstab for auto-mount on boot
+```
+💡 Optional: Add to ```/etc/fstab``` for auto-mount on boot
 
 ---
 
 2️⃣ START STACK
-
+```
 docker compose up -d
-
+```
+```
 docker ps
-
+```
 ---
 
 3️⃣ CONFIGURE APPS
@@ -116,17 +119,17 @@ docker ps
 
 🔁 FULL WORKFLOW
 
-1️⃣ Downloads → /home/jackson/media/downloads
-2️⃣ Sonarr/Radarr → Auto rename & organize
-3️⃣ Move to NAS → /mnt/nas/movies & /mnt/nas/tv
-4️⃣ Jellyfin → Streams directly from NAS
+- 1️⃣ Downloads → /home/jackson/media/downloads
+- 2️⃣ Sonarr/Radarr → Auto rename & organize
+- 3️⃣ Move to NAS → /mnt/nas/movies & /mnt/nas/tv
+- 4️⃣ Jellyfin → Streams directly from NAS
 
 ---
 
 🧯 TROUBLESHOOTING
 
-❌ Missing files → ls /mnt/nas
-🔒 Permissions → sudo chown -R 1000:1000 /mnt/nas
+❌ Missing files → ```ls /mnt/nas```
+🔒 Permissions → ```sudo chown -R 1000:1000 /mnt/nas```
 ⚠️ Import issues → Check paths: /downloads /tv /movies
 
 ---
