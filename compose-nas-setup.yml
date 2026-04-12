@@ -11,7 +11,7 @@ services:
       - TZ=America/Chicago
     volumes:
       - ./jellyfin:/config
-      - /home/jackson/media:/media
+      - /mnt/nas:/media
     ports:
       - 8096:8096
     restart: unless-stopped
@@ -31,7 +31,7 @@ services:
     environment:
       - VPN_SERVICE_PROVIDER=mullvad
       - VPN_TYPE=wireguard
-      - WIREGUARD_PRIVATE_KEY=iHlKp5ax3KVuKxtbZKZwtLkOe7FwPBhtkrXKCQNVXFU=
+      - WIREGUARD_PRIVATE_KEY=YOUR_KEY_HERE
       - WIREGUARD_ADDRESSES=10.68.16.71/32
     restart: unless-stopped
 
@@ -69,7 +69,7 @@ services:
       - TZ=America/Chicago
     volumes:
       - ./sonarr:/config
-      - /home/jackson/media/tv:/tv
+      - /mnt/nas/tv:/tv
       - /home/jackson/media/downloads:/downloads
     ports:
       - 8989:8989
@@ -84,7 +84,7 @@ services:
       - TZ=America/Chicago
     volumes:
       - ./radarr:/config
-      - /home/jackson/media/movies:/movies
+      - /mnt/nas/movies:/movies
       - /home/jackson/media/downloads:/downloads
     ports:
       - 7878:7878
@@ -99,7 +99,7 @@ services:
       - ./homepage/config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
-      - HOMEPAGE_ALLOWED_HOSTS=gethomepage.dev,192.168.1.214:3000
+      - HOMEPAGE_ALLOWED_HOSTS=*
     restart: unless-stopped
 
   jellyseerr:
