@@ -39,19 +39,23 @@ NAS structure:
 # 🛠️ Step 1 — Mount NAS
 
 bash
-```sudo mkdir -p /mnt/nas
+```
+sudo mkdir -p /mnt/nas
 
 sudo mount -t cifs //NAS_IP/Media /mnt/nas \
-  -o username=USER,password=PASS,uid=1000,gid=1000```
+  -o username=USER,password=PASS,uid=1000,gid=1000
+```
 
 (Optional: add to /etc/fstab for auto-mount)
 
-🚀 Step 2 — Start stack
+🚀 Step 2 — Start stack 
+```
 docker compose up -d
-
+```
 Check:
-
+```
 docker ps
+```
 ⚙️ Step 3 — Configure apps
 qBittorrent
 
@@ -100,13 +104,13 @@ Jellyfin reads from NAS
 🧯 Troubleshooting
 
 Jellyfin missing files:
-
+```
 ls /mnt/nas
-
+```
 Permission fix:
-
+```
 sudo chown -R 1000:1000 /mnt/nas
-
+```
 Sonarr/Radarr not importing:
 
 Make sure paths match EXACTLY:
