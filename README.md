@@ -1,4 +1,6 @@
 # 🎬 MEDIA STACK
+(WARINING: IF YOU USE THE COMPILE.YML BASE PLEASE CHANGE ALL "user" DIR TO THE NAME OF YOUR SERVER PROFILE!
+example: ```home/NAME/...```)
 
 ⚡ Jellyfin + *arr + qBittorrent + NAS ⚡
 
