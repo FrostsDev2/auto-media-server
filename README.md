@@ -4,7 +4,7 @@
 
 This stack downloads media locally, processes it with Sonarr & Radarr, and stores everything on a NAS for Jellyfin to stream anywhere.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
 📦 WHAT EACH SERVICE DOES
 
@@ -38,7 +38,7 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 👀 Watchtower  
 → Automatically updates all Docker containers
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
 🔄 HOW EVERYTHING WORKS
 
@@ -56,7 +56,7 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
         ↓
 🎥 Jellyfin (Streams Everything)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
 📁 STORAGE STRUCTURE
 
@@ -64,8 +64,7 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 ├── 🎬 movies
 └── 📺 tv
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
+---
 ⚙️ SETUP INSTRUCTIONS
 
 📋 Requirements:
@@ -73,7 +72,7 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 🐳 Docker + Docker Compose installed
 🔌 NAS mounted at /mnt/nas
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
 1️⃣ MOUNT NAS
 
@@ -84,7 +83,7 @@ sudo mount -t cifs //NAS_IP/Media /mnt/nas \
 
 💡 Optional: Add to /etc/fstab for auto-mount on boot
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
 2️⃣ START STACK
 
@@ -92,7 +91,7 @@ docker compose up -d
 
 docker ps
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
 3️⃣ CONFIGURE APPS
 
@@ -111,7 +110,7 @@ docker ps
 • Movies: /media/movies
 • TV Shows: /media/tv
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
 🔁 FULL WORKFLOW
 
@@ -120,7 +119,7 @@ docker ps
 3️⃣ Move to NAS → /mnt/nas/movies & /mnt/nas/tv
 4️⃣ Jellyfin → Streams directly from NAS
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
 🧯 TROUBLESHOOTING
 
@@ -128,7 +127,7 @@ docker ps
 🔒 Permissions → sudo chown -R 1000:1000 /mnt/nas
 ⚠️ Import issues → Check paths: /downloads /tv /movies
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
 🎯 RESULT
 
@@ -137,7 +136,7 @@ docker ps
 💾 Centralized NAS storage
 📺 Clean, seamless streaming via Jellyfin
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
 🎉 YOU’RE ALL SET!
 
