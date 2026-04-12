@@ -31,22 +31,24 @@ NAS folder structure:
 ---
 
 # 🛠️ Step 1 — Mount NAS
-
+```
 sudo mkdir -p /mnt/nas
-
+```
+```
 sudo mount -t cifs //NAS_IP/Media /mnt/nas \
   -o username=USER,password=PASS,uid=1000,gid=1000
-
+```
 (Optional) Add to /etc/fstab for auto-mount.
 
 ---
 
 # 🚀 Step 2 — Start the stack
-
+```
 docker compose up -d
-
+```
+```
 docker ps
-
+```
 ---
 
 # ⚙️ Step 3 — Configure Applications
@@ -89,11 +91,13 @@ Jellyfin:
 # 🧯 Troubleshooting
 
 Check NAS:
+```
 ls /mnt/nas
-
+```
 Fix permissions:
+```
 sudo chown -R 1000:1000 /mnt/nas
-
+```
 Ensure paths match:
 - /downloads
 - /tv
