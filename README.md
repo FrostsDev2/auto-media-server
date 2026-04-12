@@ -6,7 +6,7 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 
 ---
 
-📦 WHAT EACH SERVICE DOES
+# 📦 WHAT EACH SERVICE DOES
 
 🎥 Jellyfin  
 → Media server that streams movies & TV shows from your NAS to any device
@@ -40,7 +40,7 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 
 ---
 
-🔄 HOW EVERYTHING WORKS
+# 🔄 HOW EVERYTHING WORKS
 
 - 📝 Jellyseerr (Requests)
         ↓
@@ -58,7 +58,7 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 
 ---
 
-📁 STORAGE STRUCTURE
+# 📁 STORAGE STRUCTURE
 
 🗄️ NAS (/mnt/nas)
 
@@ -67,7 +67,7 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 └── 📺 tv
 
 ---
-⚙️ SETUP INSTRUCTIONS
+# ⚙️ SETUP INSTRUCTIONS
 
 - 📋 Requirements:
 - 🐧 Linux server (Ubuntu recommended)
@@ -76,7 +76,7 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 
 ---
 
-1️⃣ MOUNT NAS
+# 1️⃣ MOUNT NAS
 
 ```
 sudo mkdir -p /mnt/nas
@@ -89,7 +89,7 @@ sudo mount -t cifs //NAS_IP/Media /mnt/nas \
 
 ---
 
-2️⃣ START STACK
+# 2️⃣ START STACK
 ```
 docker compose up -d
 ```
@@ -98,7 +98,7 @@ docker ps
 ```
 ---
 
-3️⃣ CONFIGURE APPS
+# 3️⃣ CONFIGURE APPS
 
 🧲 qBittorrent:
 • Download path: /downloads
@@ -117,7 +117,7 @@ docker ps
 
 ---
 
-🔁 FULL WORKFLOW
+# 🔁 FULL WORKFLOW
 
 - 1️⃣ Downloads → /home/jackson/media/downloads
 - 2️⃣ Sonarr/Radarr → Auto rename & organize
@@ -126,7 +126,7 @@ docker ps
 
 ---
 
-🧯 TROUBLESHOOTING
+# 🧯 TROUBLESHOOTING
 
 ❌ Missing files → ```ls /mnt/nas```
 🔒 Permissions → ```sudo chown -R 1000:1000 /mnt/nas```
@@ -134,7 +134,7 @@ docker ps
 
 ---
 
-🎯 RESULT
+# 🎯 RESULT
 
 ⚡ Ultra-fast downloads (SSD speed)
 🤖 Fully automated organization
