@@ -39,10 +39,10 @@ NAS structure:
 # 🛠️ Step 1 — Mount NAS
 
 bash
-sudo mkdir -p /mnt/nas
+```sudo mkdir -p /mnt/nas
 
 sudo mount -t cifs //NAS_IP/Media /mnt/nas \
-  -o username=USER,password=PASS,uid=1000,gid=1000
+  -o username=USER,password=PASS,uid=1000,gid=1000```
 
 (Optional: add to /etc/fstab for auto-mount)
 
