@@ -2,7 +2,7 @@
 
 This stack downloads media locally, processes it with Sonarr and Radarr, and stores final files on a NAS for Jellyfin to stream.
 
-============================================================
+---
 
 WHAT EACH SERVICE DOES
 
@@ -46,7 +46,7 @@ Used by qBittorrent and Prowlarr.
 WATCHTOWER
 Automatically updates Docker containers to keep the system up to date.
 
-============================================================
+---
 
 HOW IT ALL WORKS TOGETHER
 
@@ -64,7 +64,7 @@ NAS (/mnt/nas) (final storage)
         ↓
 Jellyfin (streams media)
 
-============================================================
+---
 
 STORAGE STRUCTURE
 
@@ -73,7 +73,7 @@ NAS:
 ├── movies
 └── tv
 
-============================================================
+---
 
 SETUP INSTRUCTIONS
 
@@ -81,7 +81,7 @@ MEDIA STACK OVERVIEW
 
 This stack downloads media locally, processes it with Sonarr and Radarr, and stores final files on a NAS for Jellyfin to stream.
 
-------------------------------------------------------------
+---
 
 ARCHITECTURE
 
@@ -93,7 +93,7 @@ NAS Storage (/mnt/nas)
         ↓
 Jellyfin (streams from NAS)
 
-------------------------------------------------------------
+---
 
 REQUIREMENTS
 
@@ -106,7 +106,7 @@ NAS folder structure:
     movies
     tv
 
-------------------------------------------------------------
+---
 
 STEP 1 - MOUNT NAS
 
@@ -117,7 +117,7 @@ sudo mount -t cifs //NAS_IP/Media /mnt/nas
 
 (Optional) Add to /etc/fstab for auto-mount.
 
-------------------------------------------------------------
+---
 
 STEP 2 - START STACK
 
@@ -125,7 +125,7 @@ docker compose up -d
 
 docker ps
 
-------------------------------------------------------------
+---
 
 STEP 3 - CONFIGURE APPLICATIONS
 
@@ -147,7 +147,7 @@ JELLYFIN
 - Movies: /media/movies
 - TV: /media/tv
 
-------------------------------------------------------------
+---
 
 FULL WORKFLOW
 
@@ -162,7 +162,7 @@ FULL WORKFLOW
 
 4. Jellyfin streams from NAS
 
-------------------------------------------------------------
+---
 
 TROUBLESHOOTING
 
@@ -177,7 +177,7 @@ Ensure paths match exactly:
 - /tv
 - /movies
 
-------------------------------------------------------------
+---
 
 RESULT
 
