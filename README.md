@@ -61,7 +61,9 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 📁 STORAGE STRUCTURE
 
 🗄️ NAS (/mnt/nas)
+
 ├── 🎬 movies
+
 └── 📺 tv
 
 ---
