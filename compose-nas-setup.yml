@@ -24,8 +24,8 @@ services:
     devices:
       - /dev/net/tun:/dev/net/tun
     ports:
-      - 8080:8080   # qbittorrent
-      - 9696:9696   # prowlarr
+      - 8080:8080
+      - 9696:9696
     volumes:
       - ./gluetun:/gluetun
     environment:
@@ -122,4 +122,12 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./portainer:/data
+    restart: unless-stopped
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 86400 --cleanup
     restart: unless-stopped
