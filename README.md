@@ -1,4 +1,4 @@
-MEDIA STACK (JELLYFIN + ARR + QBITTORRENT + NAS)
+# 🎬 MEDIA STACK (JELLYFIN + ARR + QBITTORRENT + NAS)
 
 This stack downloads media locally, processes it with Sonarr and Radarr, and stores final files on a NAS for Jellyfin to stream.
 
