@@ -43,18 +43,18 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 🔄 HOW EVERYTHING WORKS
 
 📝 Jellyseerr (Requests)
-        ↓
-📺 Sonarr / 🎬 Radarr (Management)
-        ↓
-🔍 Prowlarr (Search Indexers)
-        ↓
-🧲 qBittorrent (Downloads via VPN)
-        ↓
-💾 Local SSD (Temporary Storage)
-        ↓
-🗄️ NAS (/mnt/nas) (Permanent Storage)
-        ↓
-🎥 Jellyfin (Streams Everything)
+        ->
+ 📺 Sonarr / 🎬 Radarr (Management)
+        ->
+ 🔍 Prowlarr (Search Indexers)
+        ->
+ 🧲 qBittorrent (Downloads via VPN)
+        ->
+ 💾 Local SSD (Temporary Storage)
+        ->
+ 🗄️ NAS (/mnt/nas) (Permanent Storage)
+        ->
+ 🎥 Jellyfin (Streams Everything)
 
 ---
 
