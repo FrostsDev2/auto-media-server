@@ -8,7 +8,8 @@ This stack downloads media locally, processes it with Sonarr and Radarr, and sto
 
 ## 📦 WHAT EACH SERVICE DOES
 
-🎥 Jellyfin - Media server that streams movies and TV shows from your NAS to any device
+🎥 Jellyfin - Media server that streams movies and TV shows from your NAS to any device - 
+
 🧲 qBittorrent - Downloads torrents to a fast local SSD first
 🔍 Prowlarr - Manages torrent indexers and provides search results to Sonarr/Radarr
 📺 Sonarr - Automatically finds, downloads, renames, and moves TV shows to NAS
