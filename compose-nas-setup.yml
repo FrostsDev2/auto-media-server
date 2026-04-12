@@ -44,7 +44,7 @@ services:
       - WEBUI_PORT=8080
     volumes:
       - ./qbittorrent:/config
-      - /home/jackson/media/downloads:/downloads
+      - /home/user/media/downloads:/downloads
     network_mode: service:gluetun
     restart: unless-stopped
 
@@ -70,7 +70,7 @@ services:
     volumes:
       - ./sonarr:/config
       - /mnt/nas/tv:/tv
-      - /home/jackson/media/downloads:/downloads
+      - /home/user/media/downloads:/downloads
     ports:
       - 8989:8989
     restart: unless-stopped
@@ -85,7 +85,7 @@ services:
     volumes:
       - ./radarr:/config
       - /mnt/nas/movies:/movies
-      - /home/jackson/media/downloads:/downloads
+      - /home/user/media/downloads:/downloads
     ports:
       - 7878:7878
     restart: unless-stopped
