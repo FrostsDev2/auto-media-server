@@ -69,10 +69,10 @@ This stack downloads media locally, processes it with Sonarr & Radarr, and store
 ---
 ⚙️ SETUP INSTRUCTIONS
 
-📋 Requirements:
-🐧 Linux server (Ubuntu recommended)
-🐳 Docker + Docker Compose installed
-🔌 NAS mounted at /mnt/nas
+- 📋 Requirements:
+- 🐧 Linux server (Ubuntu recommended)
+- 🐳 Docker + Docker Compose installed
+-🔌 NAS mounted at /mnt/nas
 
 ---
 
